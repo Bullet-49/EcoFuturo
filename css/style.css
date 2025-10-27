@@ -1,0 +1,278 @@
+:root {
+  --verde-claro: #C8E6C9;
+  --preto: black;
+  --verde-limao: #a3e635;
+  --branco: white;
+  --verde-acizentado:#f5f9f6;
+  --verde-escuro:#2d6a4f;
+  --verde-escuro-profundo:#1b4332;
+  --cinza-claro:#e0e0e0;
+  --azul-vibrante:#3498db;
+  --azul-neve:rgba(52, 152, 219, 0.1);
+  --verde:#27ae60;
+  --vermelho:#e74c3c;
+
+  --font-titulo: 2.5rem;
+  --font-subtitulo: 2rem; 
+  --font-destaque: 1.5rem; 
+  --font-texto: 1rem; 
+  --font-legenda: 0.85rem;
+
+  --space-1: 8px; 
+  --space-2: 16px; 
+  --space-3: 24px; 
+  --space-4: 32px; 
+  --space-5: 48px; 
+  --space-6: 64px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-texto);
+  background-color: var(--verde-acizentado);
+  color: var(--preto);
+}
+
+header {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--verde-claro);
+}
+
+.navegacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: var(--font-destaque);
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.links a {
+  text-decoration: none;
+  margin-right: var(--space-3);
+  padding: 6px 10px;
+  color: var(--preto);
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+a:hover {
+  background-color: var(--verde-claro);
+}
+
+.links a.ativo {
+  background-color: var(--verde-claro);
+}
+
+.conteiner {
+  background-color: var(--verde-claro);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1200px;
+  min-height: 400px;
+  border-radius: var(--space-2);
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.conteiner h2 {
+  margin-top: var(--space-2);
+}
+
+.intro {
+  flex: 1;
+  min-width: 280px;
+  padding: 10px 20px;
+}
+
+.valores li {
+  margin: 10px 0;
+  margin-left: 18px;
+}
+
+.img-pessoas {
+  flex: 1;
+  text-align: center;
+}
+
+.img-pessoas img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sobre {
+  width: 90%;
+  max-width: 800px;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 15px;
+  background-color: var(--verde-claro);
+}
+
+.sobre h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sobre p {
+  margin-top: 10px;
+}
+
+.contato {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.social a {
+  color: var(--verde-limao);
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.social a:hover {
+  background-color: var(--branco);
+  text-decoration: underline;
+}
+
+footer {
+  border-top: 1px solid var(--verde-claro);
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  font-size: 15px;
+}
+
+  footer p {
+    font-size: 14px;
+  }
+
+  .menu-hamburguer {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+  
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  header {
+    padding: 10px 15px;
+  }
+  .navegacao {
+    flex-direction: column;
+    align-items: center;
+  }
+  .links {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .links li {
+    margin: 5px 0;
+  }
+  .links a {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .conteiner {
+    padding: 15px;
+    width: 95%;
+    flex-direction: column;
+  }
+  .intro {
+    padding: 5px 10px;
+  }
+  .img-pessoas img {
+    max-width: 100%;
+  }
+  .contato {
+    font-size: 14px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: var(--verde-claro);
+    position: absolute;
+    top: 70px; /* abaixo do header */
+    left: 0;
+    border-top: 1px solid var(--verde-escuro);
+  }
+
+  .links.show {
+    display: flex;
+    background-color: var(--verde-acizentado);
+  }
+
+  .menu-hamburguer {
+    display: block;
+  }
+
+  .links li {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  .conteiner {
+    width: 98%;
+    padding: 10px;
+    min-height: 300px;
+    flex-direction: column;
+  }
+  .intro {
+    padding: 5px;
+  }
+  .sobre {
+    padding: 15px;
+  }
+  .contato {
+    font-size: 12px;
+  }
+  footer {
+    padding: 5px 0;
+  }
+  footer p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,78 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset {
+    width: 500px;
+    padding: var(--space-3);
+    border-color: var(--verde-claro);
+}
+
+legend {
+  text-align: center;
+  color:var(--verde-escuro);
+  margin-bottom: var(--space-3);
+}
+
+p {
+  margin-bottom: var(--space-2);
+}
+
+label {
+  display: block;
+  color: var(--verde-escuro);
+  margin-bottom: var(--space-1);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 7px 12px;
+  border: 1.5px solid var(--verde-claro);
+  border-radius: var(--space-1);
+  font-size: var(--space-2);
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  transition: 0.1s;
+}
+
+button:hover {
+  background-color: var(--verde-escuro-profundo);
+}
+
+.campo-entrada {
+    width: 100%;
+    border: 2px solid var(--cinza-claro);
+    border-radius: var(--space-1);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.campo-entrada:focus {
+    border-color: var(--azul-vibrante);
+    box-shadow: 0 0 0 3px var(--azul-neve);
+}
+
+.campo-entrada:valid {
+    border-color: var(--verde);
+}
+
+.campo-entrada:invalid:not(:placeholder-shown) {
+    border-color: var(--vermelho);
+}
