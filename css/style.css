@@ -86,6 +86,7 @@ header {
   color: var(--preto);
   border-radius: 5px;
   transition: 0.3s;
+  font-weight: bold;
 }
 
 .links a:hover {
@@ -94,6 +95,8 @@ header {
 
 .links a.ativo {
   background-color: var(--verde-claro);
+  color: black;
+  font-weight: bold;
 }
 
 /* MENU HAMBÚRGUER (MOBILE) */
@@ -306,3 +309,65 @@ footer p {
     font-size: 12px;
   }
 }
+
+body.dark-mode {
+  background-color: #1b4332;
+  color: #f5f5f5;
+}
+
+body.dark-mode .sobre p{
+  color: black;
+}
+
+body.dark-mode a {
+  color: white;
+  background-color: #2d6a4f;
+}
+
+body.dark-mode .sobre {
+  color: black
+}
+
+body.dark-mode .conteiner {
+  background-color: #2d6a4f ;
+}
+
+body.dark-mode .links a:hover {
+  color: black;
+}
+
+.switch {
+      position: relative;
+      width: 50px;
+      height: 30px;
+      background: #333;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .switch::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 30px;
+      width: 15px;
+      height: 15px;
+      background: #00ff99;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #00ffcc;
+    }
+
+    .dark-mode .switch {
+      background: #00ffcc44;
+    }
+
+    .dark-mode .switch::before {
+      transform: translateX(-25px);
+      background: #00ffcc;
+    }
